@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <div class="stats-container">
+            <div id="moves"></div>
+            <div id="time"></div>
+        </div>
+        <div class="game-container"></div>
+        <button class="hide" id="stop">Stop Game</button>
+    </div>
+    <div class="controls-container">
+        <p class="hide" id="result">
+            
+        </p>
+        <div class="start">
+            <h2 class="starth2" style="text-align:center;">CHOOSE TYPE TO START THE MEMORY GAME</h2>
+            <div class="startdiv">
+                <button class="btn vegetable" style="background-image: url(vegetable.png);">vegetables</button>
+                <button class="btn animal" style="background-image: url(animal.png);">animals</button>
+            </div>
+        </div>
+    </div>
+    <script src="base.js"></script>
+</body>
+</html>

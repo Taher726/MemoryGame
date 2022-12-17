@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: #4A98F7;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    box-sizing: content-box;
+    width: 26.87em;
+    padding: 2em 2.5em;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    margin: 5px;
+}
+.game-container{
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.6em;
+}
+.card-container{
+    position: relative;
+    width: 6.25rem;
+    height: 6.25rem;
+    cursor: pointer;
+    animation-name: UpDown;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition: all 0.3s;
+}
+@keyframes UpDown{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.card-before,.card-after{
+    position: absolute;
+    border-radius: 5px;
+    border: 4px solid black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: transform 0.7s ease-out;
+}
+.card-before{
+    background-color: #4A98F7;
+    font-size: 2.8em;
+    font-weight: 800;
+}
+.card-after{
+    background-color: white;
+    transform: rotateY(180deg);
+}
+.card-container.flipped .card-before{
+    transform: rotateY(180deg);
+}
+.card-container.flipped .card-after{
+    transform: rotateY(0deg);
+}
+.controls-container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #4A98F7;
+    top: 0;
+}
+#stop,#restart{
+    border: none;
+    border-radius: 3px;
+    padding: 1em 1.5em;
+    cursor: pointer;
+}
+#stop,#restart{
+    font-size: 1.1em;
+    display: block;
+    margin: 1.1em auto 0 auto;
+    background-color: black;
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+#stop:hover,#restart:hover{
+    background-color: darkgrey;
+    color: black;
+}
+.controls-container button{
+    font-size: 1.3em;
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+}
+.hide{
+    display: none;
+}
+#result{
+    text-align: center;
+    width: 26em;
+    padding: 2em;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+#result h2{
+    font-size: 2.5em;
+    color: black;
+}
+#result h4{
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+    color: black;
+}
+.stats-container{
+    float: right;
+    margin-bottom: 10px;
+}
+.btn{
+    padding: 30px 50px;
+    background-color: white;
+    background-image: url("images/web-development.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    border: 1
+    3px solid gray;
+    min-width: 200px;
+    margin: 20px;
+    font-size: 30px;
+    text-transform: capitalize;
+    font-family: cursive;
+    cursor: pointer;
+    color: black;
+}
+.btn:hover{
+    background-color: #4A98F7;
+    animation: backgroundSize 2s ease-out;
+}
+.btn:active{
+    background-size: 106%;
+}
+@keyframes backgroundSize{
+    0%{
+        background-size: 100%;
+    }
+    100%{
+        background-size: 106%;
+    }
+}
+h2{
+    color: white;
+    font-size: 35px;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
